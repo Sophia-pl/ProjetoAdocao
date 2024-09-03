@@ -1,3 +1,5 @@
 # ProjetoAdocao
 Projeto para a criação de um site de adoção de animais
-v1.0
+
+Todos os direitos reservados a Ikaro, Vitoria, Sophia, Jenifer, Leticia Lemos e Renata
+
