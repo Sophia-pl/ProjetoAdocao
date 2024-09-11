@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.39, for Linux (x86_64)
 --
--- Host: localhost    Database: bd_gerenciamentoAnimais
+-- Host: localhost    Database: bd_adocaoPet
 -- ------------------------------------------------------
 -- Server version	8.0.39-0ubuntu0.22.04.1
 
@@ -16,6 +16,82 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `tb_admin`
+--
+
+DROP TABLE IF EXISTS `tb_admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_admin` (
+  `id_admin` int NOT NULL AUTO_INCREMENT,
+  `id_user` int DEFAULT NULL,
+  PRIMARY KEY (`id_admin`),
+  KEY `fk_admuser` (`id_user`),
+  CONSTRAINT `fk_admuser` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_admin`
+--
+
+LOCK TABLES `tb_admin` WRITE;
+/*!40000 ALTER TABLE `tb_admin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_admin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_adocao`
+--
+
+DROP TABLE IF EXISTS `tb_adocao`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_adocao` (
+  `id_adocao` int NOT NULL AUTO_INCREMENT,
+  `data_adocao` date DEFAULT NULL,
+  `id_adotante` int DEFAULT NULL,
+  PRIMARY KEY (`id_adocao`),
+  KEY `fk_adocAdotante` (`id_adotante`),
+  CONSTRAINT `fk_adocAdotante` FOREIGN KEY (`id_adotante`) REFERENCES `tb_adotante` (`id_adotante`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_adocao`
+--
+
+LOCK TABLES `tb_adocao` WRITE;
+/*!40000 ALTER TABLE `tb_adocao` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_adocao` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_adotante`
+--
+
+DROP TABLE IF EXISTS `tb_adotante`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_adotante` (
+  `id_adotante` int NOT NULL AUTO_INCREMENT,
+  `id_user` int DEFAULT NULL,
+  PRIMARY KEY (`id_adotante`),
+  KEY `fk_adouser` (`id_user`),
+  CONSTRAINT `fk_adouser` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_adotante`
+--
+
+LOCK TABLES `tb_adotante` WRITE;
+/*!40000 ALTER TABLE `tb_adotante` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_adotante` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tb_animais`
 --
 
@@ -29,7 +105,19 @@ CREATE TABLE `tb_animais` (
   `raca_animal` varchar(90) NOT NULL,
   `sexo_animal` enum('M','F') NOT NULL,
   `data_nascimento` date DEFAULT NULL,
-  PRIMARY KEY (`id_animais`)
+  `id_doador` int DEFAULT NULL,
+  `id_doacao` int DEFAULT NULL,
+  `id_adocao` int DEFAULT NULL,
+  `id_adotante` int DEFAULT NULL,
+  PRIMARY KEY (`id_animais`),
+  KEY `fk_animaldoador` (`id_doador`),
+  KEY `fk_animaldoacao` (`id_doacao`),
+  KEY `fk_animaladocao` (`id_adocao`),
+  KEY `fk_animaladotante` (`id_adotante`),
+  CONSTRAINT `fk_animaladocao` FOREIGN KEY (`id_adocao`) REFERENCES `tb_adocao` (`id_adocao`),
+  CONSTRAINT `fk_animaladotante` FOREIGN KEY (`id_adotante`) REFERENCES `tb_adotante` (`id_adotante`),
+  CONSTRAINT `fk_animaldoacao` FOREIGN KEY (`id_doacao`) REFERENCES `tb_doacao` (`id_doacao`),
+  CONSTRAINT `fk_animaldoador` FOREIGN KEY (`id_doador`) REFERENCES `tb_doador` (`id_doador`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -99,6 +187,58 @@ LOCK TABLES `tb_consultas` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tb_doacao`
+--
+
+DROP TABLE IF EXISTS `tb_doacao`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_doacao` (
+  `id_doacao` int NOT NULL AUTO_INCREMENT,
+  `data_doacao` date NOT NULL,
+  `desc_doacao` varchar(200) DEFAULT NULL,
+  `id_doador` int DEFAULT NULL,
+  PRIMARY KEY (`id_doacao`),
+  KEY `fk_doacDoador` (`id_doador`),
+  CONSTRAINT `fk_doacDoador` FOREIGN KEY (`id_doador`) REFERENCES `tb_doador` (`id_doador`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_doacao`
+--
+
+LOCK TABLES `tb_doacao` WRITE;
+/*!40000 ALTER TABLE `tb_doacao` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_doacao` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tb_doador`
+--
+
+DROP TABLE IF EXISTS `tb_doador`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_doador` (
+  `id_doador` int NOT NULL AUTO_INCREMENT,
+  `id_user` int DEFAULT NULL,
+  PRIMARY KEY (`id_doador`),
+  KEY `fk_doauser` (`id_user`),
+  CONSTRAINT `fk_doauser` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_doador`
+--
+
+LOCK TABLES `tb_doador` WRITE;
+/*!40000 ALTER TABLE `tb_doador` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_doador` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tb_endereco`
 --
 
@@ -152,6 +292,32 @@ LOCK TABLES `tb_endereco_has_tb_veterinario` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tb_enduser`
+--
+
+DROP TABLE IF EXISTS `tb_enduser`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_enduser` (
+  `id_user` int DEFAULT NULL,
+  `id_endereco` int DEFAULT NULL,
+  KEY `fk_enduser` (`id_user`),
+  KEY `fk_userend` (`id_endereco`),
+  CONSTRAINT `fk_enduser` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`),
+  CONSTRAINT `fk_userend` FOREIGN KEY (`id_endereco`) REFERENCES `tb_endereco` (`id_endereco`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_enduser`
+--
+
+LOCK TABLES `tb_enduser` WRITE;
+/*!40000 ALTER TABLE `tb_enduser` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_enduser` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tb_procedimentos`
 --
 
@@ -188,7 +354,10 @@ DROP TABLE IF EXISTS `tb_telefone`;
 CREATE TABLE `tb_telefone` (
   `id_telefone` int NOT NULL,
   `telefone_tutor` int NOT NULL,
-  PRIMARY KEY (`id_telefone`)
+  `id_user` int DEFAULT NULL,
+  PRIMARY KEY (`id_telefone`),
+  KEY `fk_teluser` (`id_user`),
+  CONSTRAINT `fk_teluser` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -307,6 +476,33 @@ LOCK TABLES `tb_tutor_tb_telefone_tb_veterinario` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tb_user`
+--
+
+DROP TABLE IF EXISTS `tb_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tb_user` (
+  `id_user` int NOT NULL AUTO_INCREMENT,
+  `nome_user` varchar(80) NOT NULL,
+  `email_user` varchar(100) NOT NULL,
+  `senha_user` varchar(150) NOT NULL,
+  `foto_user` varchar(150) DEFAULT NULL,
+  `classe_user` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_user`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tb_user`
+--
+
+LOCK TABLES `tb_user` WRITE;
+/*!40000 ALTER TABLE `tb_user` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `tb_veterinario`
 --
 
@@ -340,4 +536,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-04  7:17:20
+-- Dump completed on 2024-09-11  8:01:11
