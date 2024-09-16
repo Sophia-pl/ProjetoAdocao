@@ -8,6 +8,9 @@
     <title>ProjetoAdoção</title>
 </head>
 <body>
+    <?php
+    include_once('../config/conexao.php');
+    ?>
     <section class="header">
         <header>
             <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
