@@ -12,37 +12,37 @@
             <div class="container">
                 <h2>Animais Disponíveis para Adoção</h2>
                 <div class="animal-item">
-                    <img src="../ProjetoAdocao-main/img/gato1.jpeg" alt="Animal 1">
+                    <img src="../ProjetoAdocao/img/gato1.jpeg" alt="Animal 1">
                     <h3>Pipoca</h3>
                     <p><strong>Espécie:</strong>Gato</p>
                     <p><strong>Idade:</strong> 8 meses</p>
                 </div>
                 <div class="animal-item">
-                    <img src="../ProjetoAdocao-main/img/gato2.jpeg" alt="Animal 2">
+                    <img src="../ProjetoAdocao/img/gato2.jpeg" alt="Animal 2">
                     <h3>Mia</h3>
                     <p><strong>Espécie:</strong> Gato</p>
                     <p><strong>Idade:</strong> 1 ano</p>
                 </div>
                 <div class="animal-item">
-                    <img src="../ProjetoAdocao-main/img/gato.jpg" alt="Animal 3">
+                    <img src="../ProjetoAdocao/img/gato.jpg" alt="Animal 3">
                     <h3>Tapioca</h3>
                     <p><strong>Espécie:</strong> Gato</p>
                     <p><strong>Idade:</strong> 5 meses</p>
                 </div>
                 <div class="animal-item">
-                    <img src="../ProjetoAdocao-main/img/dog3.jpeg" alt="Animal 4">
+                    <img src="../ProjetoAdocao/img/dog3.jpeg" alt="Animal 4">
                     <h3>Lola</h3>
                     <p><strong>Espécie:</strong> Cão</p>
                     <p><strong>Idade:</strong> 2 anos</p>
                 </div>
                 <div class="animal-item">
-                    <img src="../ProjetoAdocao-main/img/dog4.jpeg" alt="Animal 5">
+                    <img src="../ProjetoAdocao/img/dog4.jpeg" alt="Animal 5">
                     <h3>Bob</h3>
                     <p><strong>Espécie:</strong> Cão</p>
                     <p><strong>Idade:</strong> 3 anos</p>
                 </div>
                 <div class="animal-item">
-                    <img src="../ProjetoAdocao-main/img/dog.jpeg" alt="Animal 6">
+                    <img src="../ProjetoAdocao/img/dog.jpeg" alt="Animal 6">
                     <h3>Rex</h3>
                     <p><strong>Espécie:</strong> Cão</p>
                     <p><strong>Idade:</strong> 6 meses</p>
