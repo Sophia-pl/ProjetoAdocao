@@ -16,7 +16,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="ajudar.php">Quero ajudar</a></li>
                     <li><a href="adocao.php">Animais para adoção</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="contato.php">Contato</a></li>
                 </ul>
             </nav>
         </header>
