@@ -1,6 +1,15 @@
 <?php
     include_once('includes/header.php');
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de adoção</title>
+    <link rel="stylesheet" href="#">
+</head>
+<body>
     <section class="conteudo">
         <div class="content">
             <div class="text">
