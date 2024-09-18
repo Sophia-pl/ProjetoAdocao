@@ -1,6 +1,5 @@
 <?php
-include('config/conexao.php');
-
+    include_once('../includes/header.php');
 if(isset($_GET['idDelete'])){
     $id= $_GET['idDelete'];
 
