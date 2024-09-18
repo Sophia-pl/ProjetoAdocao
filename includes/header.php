@@ -20,7 +20,7 @@
                     <li><a href="../paginas/home.php?acao=bemvindo">Home</a></li>
                     <li><a href="../paginas/home.php?acao=ajudar">Quero ajudar</a></li>
                     <li><a href="../paginas/home.php?acao=adocao">Animais para adoção</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="../paginas/home.php?acao=contatos">Sobre nós</a></li>
                 </ul>
             </nav>
         </header>

@@ -46,8 +46,6 @@
             </tbody>
         </table>
     </main>
-    <footer>
-        <p>&copy; 2024 Clínica Veterinária</p>
-    </footer>
+
 </body>
 </html>

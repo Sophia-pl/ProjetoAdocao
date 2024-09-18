@@ -3,7 +3,7 @@
 if (!defined('DB_CONFIG')) {
     define('DB_CONFIG', [
         'host' => 'localhost',
-        'dbname' => 'bd_adocaoPet.sql',
+        'dbname' => 'bd_adocaoPet',
         'user' => 'root',
         'pass' => 'bdjmf'
     ]);

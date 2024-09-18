@@ -33,15 +33,9 @@
             <label for="data_nascimento">Data de Nascimento:</label>
             <input type="date" id="data_nascimento" name="data_nascimento"><br>
             
-            <label for="id_proprietario">ID do Proprietário:</label>
-            <input type="number" id="id_proprietario" name="id_proprietario"><br>
-            
-            <input type="submit" value="Cadastrar">
+            <a href="../paginas/home.php?acao=listagem"><input type="submit" value="Cadastrar"></a>
         </form>
     </main>
-    <footer>
-        <p>&copy; 2024 Clínica Veterinária</p>
-    </footer>
 </body>
 </html>
 

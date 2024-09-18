@@ -143,6 +143,7 @@ header .navegation li a{
     top: 600px; /* Ajuste conforme necessário */
     left: 700px; /* Ajuste conforme necessário */
     z-index: 2; /* Define um z-index maior para que a imagem fique sobre o círculo */
+    
 }
 
 .boxImg img{

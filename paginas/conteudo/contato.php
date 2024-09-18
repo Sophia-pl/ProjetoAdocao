@@ -1,6 +1,3 @@
-<?php
-    include_once('includes/header.php');
-?>
 <style>
 .body {
     font-family: Arial, sans-serif;
@@ -59,13 +56,13 @@ p {
 
     <div class="section">
         <h2>Quem Somos</h2>
-        <p>Bem-vindo ao nosso site de doação de animais! Somos um grupo dedicado de amantes dos animais que acreditam no poder da compaixão e no impacto positivo que podemos ter na vida dos animais necessitados. Nosso objetivo é encontrar lares amorosos e responsáveis para animais de todas as formas e tamanhos.</p>
-        <p>Nosso trabalho é feito com o coração e com um compromisso inabalável de garantir que cada animal encontre uma segunda chance para uma vida feliz e saudável. Contamos com uma rede de voluntários apaixonados e parceiros comunitários que ajudam a fazer a diferença todos os dias.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque nulla magnam eaque, animi id, culpa dolore tempore architecto, illum consectetur voluptates. Placeat earum qui libero aperiam ducimus illo recusandae quas?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque nulla magnam eaque, animi id, culpa dolore tempore architecto, illum consectetur voluptates. Placeat earum qui libero aperiam ducimus illo recusandae quas?</p>
     </div>
 
     <div class="section">
         <h2>Nossa Missão</h2>
-        <p>Nossa missão é promover o bem-estar animal através de adoções responsáveis, campanhas de conscientização e suporte a animais em situação de vulnerabilidade. Trabalhamos para educar a comunidade sobre cuidados adequados com os animais e promover práticas de adoção responsáveis para garantir que cada animal tenha um futuro brilhante.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem tenetur atque hic illum, repellendus placeat esse at adipisci aperiam sunt rerum repellat quas ad accusantium corrupti odit asperiores voluptate? Consequatur.</p>
     </div>
 
     <div class="section">
@@ -73,33 +70,32 @@ p {
         <div class="team-member">
             <img src="path/to/photo1.jpg" alt="Membro da equipe">
             <div>
-                <h3>João Silva</h3>
-                <p>Fundador e Diretor</p>
-                <p>João é um apaixonado por animais e fundador da nossa organização. Com anos de experiência em resgate e cuidados com animais, ele lidera nossa equipe com dedicação e amor.</p>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem numquam sed laudantium rerum molestias dolore tempora repudiandae et. Facilis deleniti non modi ad quae culpa laborum necessitatibus nihil reiciendis! Totam?</p>
             </div>
         </div>
 
         <div class="team-member">
             <img src="path/to/photo2.jpg" alt="Membro da equipe">
             <div>
-                <h3>Maria Oliveira</h3>
-                <p>Coordenadora de Voluntários</p>
-                <p>Maria coordena nossos voluntários e organiza eventos de adoção. Seu entusiasmo e compromisso são fundamentais para o sucesso de nossas iniciativas.</p>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem numquam sed laudantium rerum molestias dolore tempora repudiandae et. Facilis deleniti non modi ad quae culpa laborum necessitatibus nihil reiciendis! Totam?</p>
             </div>
         </div>
 
         <div class="team-member">
             <img src="path/to/photo3.jpg" alt="Membro da equipe">
             <div>
-                <h3>Carlos Pereira</h3>
-                <p>Veterinário</p>
-                <p>Carlos cuida da saúde dos nossos animais, oferecendo cuidados veterinários essenciais e garantindo que todos estejam prontos para a adoção.</p>
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem Ipsum</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem numquam sed laudantium rerum molestias dolore tempora repudiandae et. Facilis deleniti non modi ad quae culpa laborum necessitatibus nihil reiciendis! Totam?</p>
             </div>
         </div>
     </div>
 </div>
 </div>
-<div class="circle"></div>
 </body>
 </html>
 
