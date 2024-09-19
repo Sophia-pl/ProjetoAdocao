@@ -3,7 +3,8 @@
             <div class="text">
                 <h2>ADOTE UM <br><span>AMIGO</span></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores autem eaque voluptas accusamus, illum, quisquam distinctio adipisci iusto earum corrupti soluta tenetur voluptatibus aperiam saepe vitae architecto eligendi repellendus delectus?</p>
-                <a href="#">LOGIN</a>
+                <a href="../login/login.php">LOGIN</a>
+                
             </div>
         </div>
         <ul class="icons">
@@ -16,4 +17,6 @@
             
         </div>
         <div class="circle"></div>
+
+        
     </section>

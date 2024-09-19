@@ -6,12 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/*estilização_paginas.php*/
-/*index.php*/
-/*ajudar.php*/
-/*adocao.php*/
-/*contato.php*/
-/*login.php*/
+
 .conteudo{
     position: relative;
     width: 100%;
@@ -104,6 +99,8 @@ header .navegation li a{
 .content .text a:hover{
     transform: translateY(-10px);
 }
+
+
 .icons{
     position: absolute;
     bottom: 40px;
@@ -272,7 +269,8 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: relative;
+    position: fixed;
+    width: 100%;
 }
 
 footer p {

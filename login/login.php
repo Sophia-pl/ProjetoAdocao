@@ -11,6 +11,9 @@
 
 <body>
 
+<?php
+    include_once('../config/conexao.php');
+    ?>
     <div class="container" id="container">
         <div class="form-container sign-up">
             <form>
